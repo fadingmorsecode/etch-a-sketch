@@ -12,7 +12,7 @@ for (let i = 0; i < 256; i++) {
 }
 
 
-// Create Hover Effect Style
+
 
 
 // New Grid
@@ -21,16 +21,28 @@ const newGridBttn = document.querySelector('.bttn');
 
 newGridBttn.addEventListener('click', () => {
     let newGrid = prompt("Please enter how many squares you would like per side (Max 100)");
-   const previousGrid = document.querySelectorAll('.square-style');
-   for (let i = 0; i < previousGrid.length; i++) {
+    
+    let convertedNewGrid = Number(newGrid);
+
+    console.log(convertedNewGrid);
+    console.log(typeof(convertedNewGrid));
+    console.log(isNaN(convertedNewGrid));
+
+    if (typeof(convertedNewGrid) !== 'number' || isNaN(convertedNewGrid) === true) {
+        alert('Please enter a number');
+    } else if (convertedNewGrid === 0) {
+        // do nothing for null
+    } else if (convertedNewGrid < 1 || newGrid > 100) {
+        alert('Please enter a number between 1 and 100');
+    } else {
+        const previousGrid = document.querySelectorAll('.square-style');
+    for (let i = 0; i < previousGrid.length; i++) {
     gridContainer.removeChild(previousGrid[i]);
    } 
 
-   let sizecalculation = (600 / newGrid) -1;
+   let sizecalculation = (600 / convertedNewGrid) -1;
 
-   console.log(sizecalculation);
-
-    for (let i = 0; i < (newGrid * newGrid); i++) {
+    for (let i = 0; i < (convertedNewGrid * convertedNewGrid); i++) {
     const squareDiv = document.createElement('div');
     squareDiv.classList.add('new-square-style')
     squareDiv.style.height = `${sizecalculation}px`;
@@ -40,9 +52,9 @@ newGridBttn.addEventListener('click', () => {
         squareDiv.classList.add('square-hover');
     });
    }
+    }
 
 });
-
 
 
 
