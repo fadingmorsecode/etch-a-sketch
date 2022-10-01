@@ -16,6 +16,5 @@ const hoverEffect = document.querySelectorAll('.square-style');
 for (let i = 0; i < hoverEffect.length; i++) {
     hoverEffect[i].addEventListener('mouseover', () => {
         hoverEffect[i].classList.add('square-hover');
-        console.log('yes?')
     });
 }

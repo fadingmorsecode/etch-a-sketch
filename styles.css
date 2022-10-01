@@ -1,28 +1,31 @@
-body {
-    margin: 0;
-    padding: 0;
+.top-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.bttn {
+    height: 30px;
+    width: 180px;
+    margin: 10px;
 }
 
 .grid-container {
     display: flex;
-    height: 700px;
-    width: 700px;
+    height: 600px;
+    width: 600px;
     flex-wrap: wrap;
     border: black solid 2px;
     justify-content: center;
     align-items: center;
-    gap: 3px;
-    padding-top: 12px;
-    padding-bottom: 12px;
 }
 
 .square-style {
-    height: 35px;
-    width: 35px;
+    height: 36.5px;
+    width: 36.5px;
+    border: solid red 0.25px;
     background: black;
-    margin: 2px;
 }
 
 .square-hover {
