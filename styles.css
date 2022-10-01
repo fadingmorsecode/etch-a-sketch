@@ -21,6 +21,10 @@ body {
 .square-style {
     height: 35px;
     width: 35px;
-    background: green;
+    background: black;
     margin: 2px;
+}
+
+.square-style:hover {
+    background: pink;
 }
