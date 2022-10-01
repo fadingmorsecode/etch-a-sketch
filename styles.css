@@ -24,8 +24,13 @@
 .square-style {
     height: 36.5px;
     width: 36.5px;
-    border: solid red 0.25px;
     background: black;
+    border: red solid 0.25px;
+}
+
+.new-square-style {
+    background: black;
+    border: red solid 0.25px;
 }
 
 .square-hover {
