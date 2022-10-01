@@ -16,23 +16,21 @@
     height: 600px;
     width: 600px;
     flex-wrap: wrap;
-    border: black solid 2px;
+    border: red solid 2px;
     justify-content: center;
     align-items: center;
 }
 
 .square-style {
-    height: 36.5px;
-    width: 36.5px;
-    background: black;
-    border: red solid 0.25px;
+    height: 37.5px;
+    width: 37.5px;
+    background: #FAF9F6;
 }
 
 .new-square-style {
-    background: black;
-    border: red solid 0.25px;
+    background: #FAF9F6;
 }
 
 .square-hover {
-    background: pink;
+    background: black;
 }

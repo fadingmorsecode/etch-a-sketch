@@ -37,7 +37,7 @@ newGridBttn.addEventListener('click', () => {
     gridContainer.removeChild(previousGrid[i]);
    } 
 
-   let sizecalculation = (600 / convertedNewGrid) -1;
+   let sizecalculation = (600 / convertedNewGrid);
 
     for (let i = 0; i < (convertedNewGrid * convertedNewGrid); i++) {
     const squareDiv = document.createElement('div');
