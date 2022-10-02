@@ -24,7 +24,7 @@ const newGridBttn = document.querySelector('.newbttn');
 newGridBttn.addEventListener('click', () => {
     let newGrid = prompt("Please enter how many squares you would like per side (Max 100)", "0");
     
-    var convertedNewGrid = Number(newGrid);
+    let convertedNewGrid = Number(newGrid);
 
     if (typeof(convertedNewGrid) !== 'number' || isNaN(convertedNewGrid) === true) {
         alert('Please enter a number');
@@ -52,22 +52,13 @@ newGridBttn.addEventListener('click', () => {
         squareDiv.classList.add('square-hover');
     });
    }
-    }
+  }
 
 });
 
 // Rainbow Effect
 
-function randomRGB() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-
-}
-
 const rainbowMode = document.querySelector('.rainbowbttn');
-
-console.log(rainbowMode);
 
 rainbowMode.addEventListener('click', () => {
         const gridSquares = document.querySelectorAll('.rainbow');
