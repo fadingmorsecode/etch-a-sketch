@@ -6,6 +6,7 @@ for (let i = 0; i < 256; i++) {
     const squareDiv = document.createElement('div');
     squareDiv.classList.add('square-style');
     squareDiv.classList.add('deletion');
+    squareDiv.classList.add('rainbow');
     gridContainer.appendChild(squareDiv);
     squareDiv.addEventListener('mouseover', () => {
         squareDiv.classList.add('square-hover');
@@ -18,12 +19,12 @@ for (let i = 0; i < 256; i++) {
 
 // New Grid
 
-const newGridBttn = document.querySelector('.bttn');
+const newGridBttn = document.querySelector('.newbttn');
 
 newGridBttn.addEventListener('click', () => {
     let newGrid = prompt("Please enter how many squares you would like per side (Max 100)", "0");
     
-    let convertedNewGrid = Number(newGrid);
+    var convertedNewGrid = Number(newGrid);
 
     if (typeof(convertedNewGrid) !== 'number' || isNaN(convertedNewGrid) === true) {
         alert('Please enter a number');
@@ -41,8 +42,9 @@ newGridBttn.addEventListener('click', () => {
 
     for (let i = 0; i < (convertedNewGrid * convertedNewGrid); i++) {
     const squareDiv = document.createElement('div');
-    squareDiv.classList.add('new-square-style')
+    squareDiv.classList.add('new-square-style');
     squareDiv.classList.add('deletion');
+    squareDiv.classList.add('rainbow');
     squareDiv.style.height = `${sizecalculation}px`;
     squareDiv.style.width = `${sizecalculation}px`;
     gridContainer.appendChild(squareDiv);
@@ -53,6 +55,35 @@ newGridBttn.addEventListener('click', () => {
     }
 
 });
+
+// Rainbow Effect
+
+function randomRGB() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+}
+
+const rainbowMode = document.querySelector('.rainbowbttn');
+
+console.log(rainbowMode);
+
+rainbowMode.addEventListener('click', () => {
+        const gridSquares = document.querySelectorAll('.rainbow');
+        for (let i = 0; i < gridSquares.length; i++) {
+            const squareDiv = gridSquares[i];
+            squareDiv.addEventListener('mouseover', () => {
+            const r = Math.floor(Math.random() * 256);
+            console.log(r);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            squareDiv.style.background = "rgb(" + r + "," + g + "," + b + ")"; 
+            });
+        }
+});
+
+
 
 
 
