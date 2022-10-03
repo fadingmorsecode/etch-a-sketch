@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Etchasketch';
+    src: url(fonts/EASTRIAL.ttf);
+}
+
+body {
+    background: #AE8799;
+}
+
 .top-container {
     display: flex;
     flex-direction: column;
@@ -5,10 +14,19 @@
     align-items: center;
 }
 
+.top-red {
+    font-family: 'Etchasketch';
+}
+
 .bttn {
-    height: 30px;
-    width: 180px;
+    height: 50px;
+    width: 120px;
     margin: 10px;
+    font-size: 18px;
+    background-color: #496DDB;
+    border-style: none;
+    border-radius: 30px;
+    color: white;
 }
 
 .grid-container {
@@ -16,7 +34,6 @@
     height: 600px;
     width: 600px;
     flex-wrap: wrap;
-    border: red solid 2px;
     justify-content: center;
     align-items: center;
 }
