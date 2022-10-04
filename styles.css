@@ -11,14 +11,16 @@ body {
 
 .main {
     display: flex;
-    justify-content: center;
-    gap: 100px;
+    gap: 40px;
+    margin-left: 120px;
+    margin-top: 10px;
 }
 
 .left-side {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 0px;
 }
 
 .right-side {
@@ -28,7 +30,7 @@ body {
 
 .top-red {
     display: flex;
-    width: 750px;
+    width: 720px;
     height: 60px;
     background-color: red;
     justify-content: center;
@@ -49,18 +51,18 @@ body {
 
 .left-red {
     background-color: red;
-    width: 75px;
+    width: 60px;
 }
 
 .right-red {
     background-color: red;
-    width: 75px;
+    width: 60px;
 }
 
 .bottom-red {
     background-color: red;
     height: 60px;
-    width: 750px;
+    width: 720px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -76,7 +78,7 @@ body {
     border-radius: 100%;
     position: relative;
     top: -60px;
-    left: 15px;
+    left: 6px;
 }
 
 .right-dial {
@@ -126,4 +128,13 @@ body {
 
 .square-hover {
     background: black;
+}
+
+.grid-size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: white;
+    height: 100px;
 }
