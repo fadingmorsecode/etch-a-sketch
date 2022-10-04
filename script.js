@@ -1,3 +1,7 @@
+let currentSize = "16x16";
+const gs = document.querySelector('.grid-size');
+gs.textContent = currentSize;
+
 // Create 256 Divs 
 
 const gridContainer = document.querySelector('.grid-container');
@@ -39,6 +43,9 @@ newGridBttn.addEventListener('click', () => {
     for (let i = 0; i < previousGrid.length; i++) {
     gridContainer.removeChild(previousGrid[i]);
    } 
+
+   currentSize = `${convertedNewGrid}x${convertedNewGrid}`;
+   gs.textContent = currentSize;
 
    let sizecalculation = (600 / convertedNewGrid);
 
@@ -105,7 +112,6 @@ blackMode.addEventListener('click', () => {
             });
         }
 });
-
 
 
 
