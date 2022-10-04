@@ -7,6 +7,7 @@ for (let i = 0; i < 256; i++) {
     squareDiv.classList.add('square-style');
     squareDiv.classList.add('deletion');
     squareDiv.classList.add('rainbow');
+    squareDiv.classList.add('erase');
     gridContainer.appendChild(squareDiv);
     squareDiv.addEventListener('mouseover', () => {
         squareDiv.classList.add('square-hover');
@@ -45,6 +46,7 @@ newGridBttn.addEventListener('click', () => {
     squareDiv.classList.add('new-square-style');
     squareDiv.classList.add('deletion');
     squareDiv.classList.add('rainbow');
+    squareDiv.classList.add('erase');
     squareDiv.style.height = `${sizecalculation}px`;
     squareDiv.style.width = `${sizecalculation}px`;
     gridContainer.appendChild(squareDiv);
@@ -74,6 +76,19 @@ rainbowMode.addEventListener('click', () => {
         }
 });
 
+// Eraser Button
+
+const eraserMode = document.querySelector('.erasebttn');
+
+eraserMode.addEventListener('click', () => {
+        const gridSquares = document.querySelectorAll('.erase');
+        for (let i = 0; i < gridSquares.length; i++) {
+            const squareDiv = gridSquares[i];
+            squareDiv.addEventListener('mouseover', () => {
+            squareDiv.style.background = "#FAF9F6"; 
+            });
+        }
+});
 
 
 
