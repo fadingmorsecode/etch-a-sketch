@@ -12,8 +12,8 @@ body {
 .main {
     display: flex;
     gap: 40px;
-    margin-left: 120px;
     margin-top: 10px;
+    justify-content: center;
 }
 
 .left-side {
