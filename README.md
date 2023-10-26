@@ -1,5 +1,5 @@
 # Etch-A-Sketch
-https://cobaltjester.github.io/etch-a-sketch/
+https://fadingmorsecode.github.io/etch-a-sketch/
 # Project Summary
 Etch A Sketch is where your creativity can blossom. You'll have plenty of space to create drawings to your heart's desire. 
 - Create temporary drawings with the hover of your cursors
